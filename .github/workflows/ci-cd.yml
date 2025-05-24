@@ -160,7 +160,7 @@ jobs:
         mv '${{ runner.workspace }}/build/otclient' '${{ runner.workspace }}/build/otclient_mac'
 
     - name: Upload otclient
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: Binaries
         path: |
@@ -214,7 +214,7 @@ jobs:
         mv '${{ runner.workspace }}/build/otclient' '${{ runner.workspace }}/build/otclient_linux'
 
     - name: Upload otclient
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: Binaries
         path: |
@@ -255,7 +255,7 @@ jobs:
         }
 
     - name: Upload otclientv8.log
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         path: otclientv8.log
         name: Download-otclientv8.log
@@ -283,7 +283,7 @@ jobs:
         | Copy-Item -Destination screenshots -Force -PassThru
 
     - name: Upload screenshot
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         path: screenshots
         name: Download-screenshots
@@ -301,7 +301,7 @@ jobs:
         "VERSION=${version}" | Add-Content -Path $ENV:GITHUB_ENV
 
     - name: Upload otclient
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: Download-otclientv8
         path: |
