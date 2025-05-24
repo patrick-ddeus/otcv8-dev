@@ -96,9 +96,7 @@ jobs:
       run: |
         $sdkRoot = "C:\Android\android-sdk"
         $sdkManager = "$sdkRoot\cmdline-tools\latest\bin\sdkmanager.bat"
-        Install-AndroidSDKPackages -AndroidSDKManagerPath $sdkManager `
-                                  -AndroidSDKRootPath $sdkRoot `
-                                  -AndroidPackages "ndk;21.4.7075529"
+        $sdkManager.bat "platforms;android-35" "build-tools;35.0.0" "ndk;25.2.9519653"
 
     - name: Build for android
       timeout-minutes: 25
